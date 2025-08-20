@@ -21,6 +21,30 @@
             padding: 0;
             box-sizing: border-box;
         }
+        <!-- Cart Icon -->
+<div class="cart-icon" onclick="openCartModal()">
+    🛒 <span id="cart-count">0</span>
+</div>
+<!-- Cart Modal -->
+<div class="modal" id="cart-modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeCartModal()">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div id="cart-total" style="font-weight: bold; margin: 20px 0;"></div>
+        <button class="btn btn-primary" onclick="completePurchase()">Complete Purchase</button>
+    </div>
+</div>
+<!-- Thank You Modal -->
+<div class="modal" id="thankyou-modal">
+    <div class="modal-content" style="text-align: center;">
+        <span class="close-modal" onclick="closeThankYouModal()">&times;</span>
+        <h2>Thank You for Your Purchase!</h2>
+        <p>Your order has been received and will be processed shortly.</p>
+        <p>We appreciate your trust in T-Kam Essential Oil!</p>
+        <button class="btn btn-primary" onclick="closeThankYouModal()">Continue Shopping</button>
+    </div>
+</div>
         
         body {
             font-family: 'Montserrat', sans-serif;
@@ -727,7 +751,7 @@
                         <h3>T-Kam Essential Oil 30ml</h3>
                         <p>Perfect for first-time users or travel purposes. Experience the benefits in our convenient 30ml bottle.</p>
                         <div class="price">Rp 150.000</div>
-                        <button class="btn btn-primary" onclick="openModal('30ml')">Add to Cart</button>
+                        <button class="btn btn-primary" onclick="addToCart('30ml')">Add to Cart</button>
                     </div>
                 </div>
                 <div class="product-card">
@@ -738,7 +762,7 @@
                         <h3>T-Kam Essential Oil 50ml</h3>
                         <p>Our best-selling size offering optimal value. The perfect balance between quantity and quality.</p>
                         <div class="price">Rp 225.000</div>
-                        <button class="btn btn-primary" onclick="openModal('50ml')">Add to Cart</button>
+                        <button class="btn btn-primary" onclick="addToCart('50ml')">Add to Cart</button>
                     </div>
                 </div>
                 <div class="product-card">
@@ -749,7 +773,7 @@
                         <h3>T-Kam Essential Oil 100ml</h3>
                         <p>Our premium family size for serious users. Offers the best value with long-lasting benefits.</p>
                         <div class="price">Rp 400.000</div>
-                        <button class="btn btn-primary" onclick="openModal('100ml')">Add to Cart</button>
+                        <button class="btn btn-primary" onclick="addToCart('100ml')">Add to Cart</button>
                     </div>
                 </div>
             </div>
