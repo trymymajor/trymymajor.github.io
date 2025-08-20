@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Kam Essential Oil - Premium Tiwai Onion Oil from East Kalimantan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-green: #2c5e4b;
+            --light-green: #a0c1b8;
+            --gold: #d4af37;
+            --white: #fffcf5;
+            --cream: #f8f4e9;
+            --dark: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--dark);
+            border: 2px solid var(--gold);
+        }
+        
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-green);
+            border: 2px solid var(--primary-green);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--primary-green);
+            color: var(--white);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--gold);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary-green);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 94, 75, 0.8), rgba(44, 94, 75, 0.8)), 
+                        url('https://placehold.co/1920x1080') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--cream);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .about-img img:hover {
+            transform: scale(1.05);
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* Products Section */
+        .products {
+            background-color: var(--cream);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.1);
+        }
+        
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .product-info h3 {
+            margin-bottom: 10px;
+        }
+        
+        .price {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gold);
+            margin: 15px 0;
+        }
+        
+        /* After Sales Section */
+        .after-sales-content {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .guides {
+            flex: 1;
+        }
+        
+        .guide-item {
+            margin-bottom: 30px;
+        }
+        
+        .guide-item h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: var(--primary-green);
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: var(--cream);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        /* Points System Section */
+        .points-system {
+            background-color: var(--cream);
+        }
+        
+        .points-container {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .points-info {
+            flex: 1;
+        }
+        
+        .points-calculator {
+            flex: 1;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .points-calculator h3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        /* Music Player Section */
+        .music-player {
+            text-align: center;
+        }
+        
+        .player-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--cream);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .playlist {
+            margin-top: 30px;
+            text-align: left;
+        }
+        
+        .track {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: var(--white);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .track:hover {
+            background-color: var(--light-green);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .footer-logo span {
+            color: var(--gold);
+        }
+        
+        .footer-about p {
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--gold);
+            color: var(--dark);
+        }
+        
+        .footer-links h3 {
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        
+        .contact-info {
+            margin-top: 10px;
+        }
+        
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--gold);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary-green);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content,
+            .after-sales-content,
+            .points-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                transform: translateY(-150%);
+                transition: transform 0.3s;
+                z-index: 999;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0 0 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .section-title {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">T-<span>Kam</span></a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#after-sales">After Sales</a></li>
+                    <li><a href="#points-system">Points System</a></li>
+                    <li><a href="#music">Relaxation</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Aroma Alami, Kebaikan Sejati dari Kalimantan</h1>
+                <p>Premium essential oil crafted from the finest Tiwai onion of East Kalimantan, delivering nature's purest benefits for your wellbeing.</p>
+                <div class="hero-btns">
+                    <a href="#products" class="btn btn-primary">Shop Now</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About T-Kam Essential Oil</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="https://placehold.co/600x400" alt="Tiwai onions being harvested by local farmers in East Kalimantan's lush rainforest">
+                </div>
+                <div class="about-text">
+                    <p>T-Kam Essential Oil is a premium product born from the rich biodiversity of East Kalimantan, Indonesia. Our essential oil is extracted through a meticulous cold-press process from the indigenous Tiwai onion, known for its exceptional therapeutic properties.</p>
+                    <p>We collaborate directly with local farmers in Kalimantan, ensuring ethical sourcing while supporting sustainable agricultural practices. Our production process preserves 100% of the beneficial compounds, delivering nature's purest form of wellness.</p>
+                    <p>Every bottle of T-Kam Essential Oil represents our commitment to quality, purity, and the preservation of Kalimantan's unique biodiversity.</p>
+                    <a href="#" class="btn btn-primary" style="margin-top: 20px;">Our Sustainability Promise</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits">
+        <div class="container">
+            <h2 class="section-title">Health Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌿</div>
+                    <h3>Antioxidant Powerhouse</h3>
+                    <p>Rich in antioxidants that help combat free radicals, slow down the aging process, and protect your cells from damage.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💤</div>
+                    <h3>Stress Relief</h3>
+                    <p>Our oil's soothing aroma helps reduce stress and anxiety levels, promoting better sleep and relaxation.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🦠</div>
+                    <h3>Antimicrobial</h3>
+                    <p>Naturally fights against bacteria, fungi, and viruses, making it an excellent addition to your wellness routine.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌬️</div>
+                    <h3>Respiratory Support</h3>
+                    <p>Helps clear nasal passages and promotes easier breathing, especially beneficial during allergy seasons.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💆</div>
+                    <h3>Muscle Relaxant</h3>
+                    <p>Effective in relieving muscle tension and joint pain when used in massage or aromatherapy.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Cognitive Boost</h3>
+                    <p>Enhances mental clarity and focus, making it perfect for study or work environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://placehold.co/600x400" alt="T-Kam Essential Oil 30ml bottle with green packaging and golden label">
+                    </div>
+                    <div class="product-info">
+                        <h3>T-Kam Essential Oil 30ml</h3>
+                        <p>Perfect for first-time users or travel purposes. Experience the benefits in our convenient 30ml bottle.</p>
+                        <div class="price">Rp 150.000</div>
+                        <button class="btn btn-primary" onclick="openModal('30ml')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://placehold.co/600x400" alt="T-Kam Essential Oil 50ml premium glass bottle with green and gold packaging">
+                    </div>
+                    <div class="product-info">
+                        <h3>T-Kam Essential Oil 50ml</h3>
+                        <p>Our best-selling size offering optimal value. The perfect balance between quantity and quality.</p>
+                        <div class="price">Rp 225.000</div>
+                        <button class="btn btn-primary" onclick="openModal('50ml')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://placehold.co/600x400" alt="T-Kam Essential Oil 100ml family size bottle with luxury green and gold packaging">
+                    </div>
+                    <div class="product-info">
+                        <h3>T-Kam Essential Oil 100ml</h3>
+                        <p>Our premium family size for serious users. Offers the best value with long-lasting benefits.</p>
+                        <div class="price">Rp 400.000</div>
+                        <button class="btn btn-primary" onclick="openModal('100ml')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- After Sales Section -->
+    <section class="after-sales" id="after-sales">
+        <div class="container">
+            <h2 class="section-title">After Sales Service</h2>
+            <div class="after-sales-content">
+                <div class="guides">
+                    <div class="guide-item">
+                        <h3>Usage Guide</h3>
+                        <p><strong>Aromatherapy:</strong> Add 3-5 drops to your diffuser with water. Run for 30-60 minutes in a well-ventilated area.</p>
+                        <p><strong>Topical Use:</strong> Dilute 1-2 drops with a carrier oil (like coconut or jojoba oil) before applying to skin.</p>
+                        <p><strong>Massage:</strong> Mix 5-10 drops with 30ml carrier oil for a relaxing therapeutic massage.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h3>Storage Tips</h3>
+                        <p>Store in a cool, dark place away from direct sunlight. Keep the bottle tightly closed when not in use.</p>
+                        <p>For best quality, use within 12 months of opening. The shelf life is typically 2-3 years when stored properly.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h3>Quick Support</h3>
+                        <p>Need immediate assistance? Chat with our customer service via WhatsApp:</p>
+                        <button class="btn btn-primary" onclick="window.open('https://wa.me/6281234567890')">Chat on WhatsApp</button>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Contact Our Support Team</h3>
+                    <form id="supportForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="product-info">Product Information</option>
+                                <option value="usage-guide">Usage Questions</option>
+                                <option value="order-issue">Order Issue</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Points System Section -->
+    <section class="points-system" id="points-system">
+        <div class="container">
+            <h2 class="section-title">Member Points System</h2>
+            <div class="points-container">
+                <div class="points-info">
+                    <h3>Earn & Redeem Points</h3>
+                    <p>Join our membership program and earn points with every purchase that can be redeemed for exclusive benefits:</p>
+                    <ul style="margin: 20px 0 20px 20px;">
+                        <li>1 point for every Rp 1,000 spent</li>
+                        <li>10 bonus points for bottle returns (eco-friendly initiative)</li>
+                        <li>20 bonus points for product reviews</li>
+                        <li>Points never expire</li>
+                    </ul>
+                    <p>Redeem your points for discounts, free products, or exclusive gifts from East Kalimantan.</p>
+                    <div style="margin-top: 30px;">
+                        <button class="btn btn-primary" style="margin-right: 15px;" onclick="openModal('login')">Member Login</button>
+                        <button class="btn btn-secondary" onclick="openModal('register')">Register Now</button>
+                    </div>
+                </div>
+                <div class="points-calculator">
+                    <h3>Points Calculator</h3>
+                    <div class="form-group">
+                        <label for="purchase-amount">Purchase Amount (Rp)</label>
+                        <input type="number" id="purchase-amount" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="return-bottle"> Returning empty bottle?
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="write-review"> Writing a product review?
+                        </label>
+                    </div>
+                    <button class="btn btn-primary" onclick="calculatePoints()" style="width: 100%;">Calculate Points</button>
+                    <div id="points-result" style="margin-top: 20px; text-align: center; font-size: 18px; font-weight: 500;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Player Section -->
+    <section class="music-player" id="music">
+        <div class="container">
+            <h2 class="section-title">Relaxation Music</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 30px;">Enhance your aromatherapy experience with our curated relaxation music. Play these soothing sounds to complement your T-Kam Essential Oil usage.</p>
+            <div class="player-container">
+                <h3>Now Playing: <span id="now-playing">Select a track</span></h3>
+                <audio id="audio-player" controls style="width: 100%; margin: 20px 0;"></audio>
+                <div class="playlist">
+                    <h4>Aromatherapy Playlist</h4>
+                    <div class="track" onclick="playTrack('Forest Sounds', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3')">
+                        <span>Forest Sounds</span>
+                        <span>3:22</span>
+                    </div>
+                    <div class="track" onclick="playTrack('Meditation Harmony', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3')">
+                        <span>Meditation Harmony</span>
+                        <span>4:15</span>
+                    </div>
+                    <div class="track" onclick="playTrack('Tiwai Morning', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3')">
+                        <span>Tiwai Morning</span>
+                        <span>5:48</span>
+                    </div>
+                    <div class="track" onclick="playTrack('Borneo Rain', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3')">
+                        <span>Borneo Rain</span>
+                        <span>6:30</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <span class="footer-logo">T-<span>Kam</span></span>
+                    <p>Premium Essential Oil from the heart of Kalimantan. Natural, sustainable, and crafted with care for your wellbeing.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#
