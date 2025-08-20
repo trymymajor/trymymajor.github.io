@@ -912,6 +912,23 @@
         </div>
     </section>
 
+/* Tambahkan animasi saat menambahkan ke cart */
+@keyframes cartBounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+.cart-icon.added {
+    animation: cartBounce 0.5s ease;
+}
+/* Style untuk item dalam cart modal */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
